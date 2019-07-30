@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from ux_suite import *
 
-class Ui_MainWindow(object):
+class Ui_MainWindow(suite): # This Inheritance  is to integrate
+    
+    def __init__ (self): #This init is to integrate
+        suite.__init__(self)
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(847, 618)
@@ -135,8 +140,7 @@ class Ui_MainWindow(object):
         self.pushButton_9.setObjectName("pushButton_9")
         self.verticalLayout_3.addWidget(self.pushButton_9)
         self.pushButton = QtWidgets.QPushButton(self.widget2)
-        self.pushButton.setStyleSheet("background-color: rgb(0, 85, 0);\n"
-"background-color: rgb(85, 170, 127);")
+        self.pushButton.setStyleSheet("background-color: rgb(85, 170, 127);")
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout_3.addWidget(self.pushButton)
         self.pushButton_10 = QtWidgets.QPushButton(self.widget2)
@@ -210,6 +214,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+        self.integrate_functionality() # This statement is to integrate
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
