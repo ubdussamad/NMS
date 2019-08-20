@@ -4,9 +4,6 @@ import hmac, hashlib
 from base64 import b64encode
 
 
-"""
-Basic info
-"""
 class Invalid_Key_Filename ( Exception ):
     pass
 
